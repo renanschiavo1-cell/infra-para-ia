@@ -47,3 +47,10 @@ def prediz(entrada: Entrada):
         sentimento=modelo.classes_[indice],
         confianca=round(float(probabilidades[indice]), 4),
     )
+
+
+@app.get("/sobre")
+def sobre():
+    return {
+        "dupla": "Renan da Silva Schiavo"
+    }
